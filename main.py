@@ -19,7 +19,8 @@ def create_memo(memo:Memo):
 @app.get("/memos")
 def read_memo():
     
-    return sorted(memos, key=lambda x: (x.content, x.id))
+    # return sorted(memos, key=lambda x: (x.content, x.id))
+    return memos
 
 @app.put("/memos/{memo_id}")
 def put_memo(req_memo:Memo):
